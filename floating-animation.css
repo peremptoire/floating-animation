@@ -1,0 +1,38 @@
+/* Pour un fonctionnement optimal, utiliser de préférence une image avec de la transparence (PNG) */
+:root {
+  --url: url("logo.png"); /* Mettre votre image dans le même dossier et indiquer son nom - Ici, "logo.png) */
+  --size: 50%; /* Gère la taille de l'image en % */
+  --float: 20px; /* Gère la hauteur du flottement - Par défaut 20 pixels */
+  --vitesse: 6s; /* Gère la vitesse de l'animation - Par défaut 6 secondes */
+}
+
+/* Ne modifiez rien en dessous sauf si vous savez ce que vous faites */
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.logo {
+  animation: float var(--vitesse) ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--url) no-repeat center;
+  background-size: var(--size);
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(var(--float));
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
