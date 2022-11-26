@@ -1,6 +1,10 @@
 # floating-animation
 Une animation simple de flottement en HTML/CSS. Utile pour animer rapidement une image ou un logo sur un overlay.
 
+Pour télécharger les fichiers, sélectionnez "code" puis "Download Zip".
+
+![Sans titre](https://user-images.githubusercontent.com/91347360/204094734-a6e8c120-68c8-44e5-8cd8-124624642ac9.png)
+
 Pour l'utiliser :
 
 - Glisser-déposer directement le fichier dans OBS/Streamlabs ou l'intégrer via une source "Navigateur".
