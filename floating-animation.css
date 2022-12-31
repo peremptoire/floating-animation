@@ -1,0 +1,40 @@
+:root {
+  --url: url("logo.png"); /* Insérez votre image dans le même dossier avec le même nom.
+  Pour un fonctionnement optimal, utiliser de préférence une image avec de la transparence (PNG)*/
+  --size: 50%; /* Gérez la taille de l'image en % - Par défaut 50% */
+  --float: 20px; /* Gère la hauteur du flottement - Plus la valeur est grande et plus l'amplitude de l'animation sera grande */
+  --vitesse: 6s; /* Gère la vitesse de l'animation - Plus la valeur est grande et plus l'nimation est lente */
+}
+
+/* Ne modifiez rien en dessous sauf si vous savez ce que vous faites !
+Si vous avez envie d'experimenter, faites une copie de sauvegarde des fichiers avant !*/
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.logo {
+  animation: float var(--vitesse) ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--url) no-repeat center;
+  background-size: var(--size);
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(var(--float));
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
